@@ -19,10 +19,10 @@ update(idP,newP,callback){
     [
         newP.name, newP.price, newP.saldo, idP
     ],callback)
-}
+};
 delete(idP,callback){
     return db.query("DELETE FROM products WHERE id_products=?",[idP],callback)
-}
+};
 
 
 module.exports=products;
