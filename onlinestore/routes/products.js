@@ -35,4 +35,25 @@ router.post('/',function(request,response){
     })
 });
 
+router.put('/:id',function(request,response){
+    products.update(request.params.id, request.body, function(err,result){
+        if(err){
+            response.send(err)
+        }
+        else{
+            response.json(result)
+        }
+    })
+});
+
+router.delete('/:id',function(request,response){
+    products.delete(request.params.id);
+            if(err){
+            response.send(err)
+        }
+        else{
+            response.json(result)
+        }
+});
+
 module.exports=router;

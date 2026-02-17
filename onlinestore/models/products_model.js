@@ -16,7 +16,7 @@ const products={
     update(idP,newP,callback){
         return db.query("UPDATE products SET name=?, price=?, saldo=? WHERE id_products=?",
         [
-            newP.name, newP.price, newP.saldo, idP
+        newP.name, newP.price, newP.saldo, idP
         ],callback)
     },
     
